@@ -22,7 +22,7 @@ export default function App() {
         value={url}
         onChange={(evt) => seturl(evt.target.value)}
       />
-      <button onClick={generateQRCode}>Generate</button>
+      <button onClick={generateQRCode}>Generate QR code</button>
       <img src={qrcode} />
     </div>
   );
