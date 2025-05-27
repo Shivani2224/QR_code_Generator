@@ -1,0 +1,140 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f1f5f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#heading {
+  background-color: #fb8b24;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  border-bottom: 5px solid #0f4c5c;
+}
+
+#heading h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#qrForm {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  transition: transform 0.2s ease-in-out;
+}
+
+#qrForm:hover {
+  transform: scale(1.02);
+}
+
+#qrForm label {
+  font-weight: bold;
+  color: #0f4c5c;
+}
+
+#qrForm input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#qrForm input:focus {
+  border-color: #fb8b24;
+  outline: none;
+  box-shadow: 0px 0px 4px rgba(251, 139, 36, 0.5);
+}
+
+#qrForm button {
+  padding: 12px;
+  background-color: #0f4c5c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#qrForm button:hover {
+  background-color: #fb8b24;
+  transform: translateY(-2px);
+}
+
+#qrForm button:active {
+  transform: translateY(0);
+}
+
+#genrated-QR {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+#genrated-QR h2 {
+  margin: 0 0 15px;
+  color: #0f4c5c;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+#qrCodeContainer {
+  margin-top: 10px;
+  padding: 15px;
+  border: 2px dashed #fb8b24;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  min-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#qrCodeContainer:hover {
+  background-color: #ffedd8;
+  border-color: #0f4c5c;
+}
+
+@media (max-width: 400px) {
+  #qrForm,
+  #genrated-QR {
+    width: 90%;
+  }
+}
